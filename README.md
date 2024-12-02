@@ -31,6 +31,6 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 
 ### 실행 화면
 
-<img src="video/testvideo (1).gif" alt="App Demo" width="250">
+<img src="video/testvideo.gif" alt="App Demo" width="250">
 
--페이드 인/아웃 애니메이션으로 부드럽게 명언이 전환 됩니다.
+- 페이드 인/아웃 애니메이션으로 부드럽게 명언이 전환 됩니다.
