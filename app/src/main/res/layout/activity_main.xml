@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginTop="4dp"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    >
+
+    <!--    제목-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAllCaps="true"
+        android:typeface="serif"></TextView>
+
+    <!--    카테고리 버튼-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/success"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/success"
+            android:textColor="@color/black"
+            android:background="@drawable/radio_button_background"
+            android:gravity="center"
+            android:button="@null"
+            android:textSize="20sp"
+            android:textStyle="bold"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/life"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/life"
+            android:textColor="@color/black"
+            android:background="@drawable/radio_button_background"
+            android:gravity="center"
+            android:button="@null"
+            android:textSize="20sp"
+            android:textStyle="bold"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/motivation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/motivation"
+            android:textColor="@color/black"
+            android:background="@drawable/radio_button_background"
+            android:gravity="center"
+            android:button="@null"
+            android:textSize="20sp"
+            android:textStyle="bold"></RadioButton>
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/txt"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="serif"></TextView>
+
+        <!--        명언 출력 버튼-->
+        <android.widget.Button
+            android:id="@+id/showWise"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/txt2"
+            android:textColor="@color/black"
+            android:background="@drawable/button_background"
+            android:textSize="17sp"
+            android:textStyle="bold"></android.widget.Button>
+    </RelativeLayout>
+
+
+</LinearLayout>

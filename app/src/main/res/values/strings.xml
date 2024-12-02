@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">명언</string>
+    <string name="label">명언</string>
+    <string name="title"><u>Quotes</u></string>
+    <string name="success">success</string>
+    <string name="motivation">motivation</string>
+    <string name="life">life</string>
+    <string name="txt">quote will appear here</string>
+    <string name="txt2">Show Quote</string>
+
+    <string-array name="success_quotes">
+        <item>성공은 준비된 자에게 찾아온다.</item>
+        <item>성공의 비결은 목표를 세우고 끝까지 포기하지 않는 것이다.</item>
+        <item>성공은 결코 우연이 아니다.</item>
+        <item>성공은 결국 준비, 기회, 노력의 합이다.</item>
+        <item>"당신이 어디에 있든, 성공은 열정과 노력에 의해 결정된다.</item>
+        <item>자신감을 잃지 말고, 끊임없이 도전하라.</item>
+        <item>성공은 내가 얼마나 잘했는지보다 내가 얼마나 노력했는지를 반영한다.</item>
+        <item>"성공은 최선을 다한 노력에 대해 얻는 보상이다.</item>
+        <item>성공한 사람들은 실패를 두려워하지 않는다.</item>
+        <item>"성공은 결코 시작할 때 무엇을 가졌는지가 아니라, 끝날 때 무엇을 이룬 것이냐에 달려 있다.</item>
+    </string-array>
+
+    <string-array name="life_quotes">
+        <item>인생은 한 번뿐이다. 그러므로 자신이 원하는 삶을 살아라.</item>
+        <item>인생에서 중요한 것은 얼마나 오래 사는가가 아니라, 얼마나 잘 사는가이다.</item>
+        <item>인생은 하루하루가 중요한 소중한 시간이다.</item>
+        <item>인생에서 가장 큰 장애물은 자신에게 맞서는 것이다.</item>
+        <item>인생은 길고 긴 여정이다. 중요한 것은 그 여정에서 배우는 것이다.</item>
+        <item>인생은 우리가 만나는 사람들과 우리가 선택하는 순간들로 가득 차 있다.</item>
+        <item>인생은 끊임없는 변화의 흐름이다.</item>
+        <item>인생의 의미는 사랑을 찾고, 경험을 나누며, 사람들에게 좋은 영향을 주는 것이다.</item>
+        <item>인생에서 중요한 것은 진정으로 하고 싶은 것을 추구하는 것이다.</item>
+        <item>인생에서 우리가 겪는 고통은 결국 우리가 성장할 수 있게 하는 기회가 된다.</item>
+    </string-array>
+
+    <string-array name="motivation_quotos">
+        <item>내일은 오늘보다 더 나은 삶을 위해 노력하는 것이다.</item>
+        <item>불가능한 일도 노력하면 가능한 일로 바뀐다.</item>
+        <item>성공적인 사람은 실패를 두려워하지 않으며, 두려움을 극복하려 한다.</item>
+        <item>지금 하는 일에 최선을 다하면 내일의 나 자신이 자랑스러워질 것이다.</item>
+        <item>꿈을 꾸는 자만이 세상을 바꿀 수 있다.</item>
+        <item>오늘 할 수 있는 일을 내일로 미루지 말자.</item>
+        <item>지금이 아니면 안 된다.</item>
+        <item>기회는 열정 있는 사람에게만 보인다.</item>
+        <item>우리는 누구든지 될 수 있다, 다만 마음먹고 도전하기만 하면 된다.</item>
+        <item>변화를 원한다면, 변화를 만들어야 한다.</item>
+    </string-array>
+
+</resources>
