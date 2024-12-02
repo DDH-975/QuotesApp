@@ -14,4 +14,16 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 - 버튼 클릭 시 새로운 명언을 보여주는 간단한 기능.
 
   
+## Screenshots
 
+### Home Screen
+![Home Screen](screenshots/home_screen.png)
+
+- 앱 실행 시 보이는 홈 화면.  
+- 세 가지 카테고리(**Success**, **Life**, **Motivation**) 중 하나를 선택할 수 있습니다.
+
+### Quote Categories
+![Quote Categories](screenshots/quote_category.png)
+
+- 선택한 카테고리에 따라 명언이 표시됩니다.  
+- 예: **Life** 카테고리를 선택한 경우.
