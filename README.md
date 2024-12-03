@@ -42,7 +42,7 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 - 예: **Success** 카테고리를 선택한 경우.
 
 
-### 실행 화면
+## 실행 화면
 
 <img src="video/testvideo.gif" alt="App Demo" width="250">
 
