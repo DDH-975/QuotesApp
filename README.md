@@ -13,7 +13,20 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 - 직관적이고 간단한 사용자 인터페이스.
 - 버튼 클릭 시 새로운 명언을 보여주는 간단한 기능.
 
-  
+
+## 기술 스택
+
+- **언어 (Languages)**: Java, XML
+- **도구 (Tools)**: Android Studio
+- **라이브러리 (Libraries)**: Android SDK
+- **기능 (Features)**:
+  - Android View Animations
+  - Random Utility for dynamic content generation
+- **기술 적용**:
+  - 페이드 애니메이션을 사용한 부드러운 전환
+  - RadioButton 및 TextView로 간단한 UI 구현
+
+
 ## Screenshots
 
 ### Home Screen
@@ -29,8 +42,8 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 - 예: **Success** 카테고리를 선택한 경우.
 
 
-### 실행 화면
+## 실행 화면
 
-<img src="video/testvideo (1).gif" alt="App Demo" width="250">
+<img src="video/testvideo.gif" alt="App Demo" width="250">
 
--페이드 인/아웃 애니메이션으로 부드럽게 명언이 전환 됩니다.
+- 페이드 인/아웃 애니메이션으로 부드럽게 명언이 전환 됩니다.
