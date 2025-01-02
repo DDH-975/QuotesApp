@@ -33,29 +33,37 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 ## Screenshots
 
 ### Home Screen
-<img src="screenshots/home.png" alt="Home Screen" width="200">
+<img src="screenshots/home.png" alt="home" width="200">
 
 - 앱 실행 시 보이는 홈 화면.  
 - 세 가지 카테고리(**Success**, **Life**, **Motivation**) 중 하나를 선택할 수 있습니다.
 
+
 ### Quote Categories
-<img src="screenshots/showQuotes.png" alt="Home Screen" width="200">
+<img src="screenshots/showQuotes.png" alt="showQuotes" width="200">
 
 - 선택한 카테고리에 따라 명언이 표시됩니다.  
 - 예: **Success** 카테고리를 선택한 경우.
 
-### Add Quote
-<img src="screenshots/add.png" alt="Home Screen" width="200">
 
-- 카테고리를 롱 클릭하면 dialog가 출력됩니다.
+### Add Quote
+<img src="screenshots/add.png" alt="add" width="200">
+
+- 카테고리를 롱 클릭하면 dialog가 출력됩니다.  
 - 새로운 명언을 입력하고 추가 버튼을 클릭하면 데이터베이스에 추가됩니다.
 
-### Delete Quote
 
-- 오른쪽 상단의 아이콘을 클릭하면  각 카테고리별 저장된 명언들 
-<img src="screenshots/delete.png" alt="Home Screen" width="200">
+### Delete Quote
+<img src="screenshots/option.png" alt="option" width="200">
+
+- 오른쪽 상단의 아이콘을 클릭하면 옵션메뉴가 열립니다.
+- 목록을 선택하면 각 카테고리별로 저장된 명언들이 새로운 액티비티에 출력됩니다.
+
+  
+<img src="screenshots/delete.png" alt="delete" width="200">
 
 - 명언들 오른쪽의 체크박스를 선택하고 아래의 버튼을 누르면 삭제됩니다.
+
 
 ## 실행 화면
 
