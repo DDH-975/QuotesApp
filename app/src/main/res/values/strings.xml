@@ -5,7 +5,7 @@
     <string name="success">success</string>
     <string name="motivation">motivation</string>
     <string name="life">life</string>
-    <string name="txt">quote will appear here</string>
+    <string name="txt">quote will appear here \n\n 명언을 추가하려면 \n 카테고리를 길게 눌러 주세요.</string>
     <string name="txt2">Show Quote</string>
 
     <string-array name="success_quotes">

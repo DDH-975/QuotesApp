@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/motivationEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="여기에 입력"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:scrollHorizontally="false"
+        android:overScrollMode="always"
+        android:minLines="3"
+        android:textColor="@color/black"
+        android:background="@android:drawable/edit_text"
+        android:padding="10dp"/>
+
+</LinearLayout>

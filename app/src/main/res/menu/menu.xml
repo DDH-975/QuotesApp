@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="저장된 명언보기"></item>
+    <item
+        android:id="@+id/savedSuccess"
+        android:title="Success"></item>
+    <item
+        android:id="@+id/savedLife"
+        android:title="Life"></item>
+    <item
+        android:id="@+id/savedMotivation"
+        android:title="Motivation"></item>
+
+</menu>
