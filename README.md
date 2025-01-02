@@ -13,19 +13,22 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 - 직관적이고 간단한 사용자 인터페이스.
 - 버튼 클릭 시 새로운 명언을 보여주는 간단한 기능.
 
-
 ## 기술 스택
 
 - **언어 (Languages)**: Java, XML
 - **도구 (Tools)**: Android Studio
 - **라이브러리 (Libraries)**: Android SDK
-- **기능 (Features)**:
-  - Android View Animations
-  - Random Utility for dynamic content generation
 - **기술 적용**:
-  - 페이드 애니메이션을 사용한 부드러운 전환
-  - RadioButton 및 TextView로 간단한 UI 구현
+  - **SQLite** 데이터베이스 사용: 앱 내 명언 저장 및 조회
+  - **페이드 애니메이션**: 화면 전환 시 부드러운 효과 제공
+  - **Random Utility**: 동적 콘텐츠 생성
 
+## 업데이트 내역
+
+### 업데이트
+- **SQLite**: 앱 내 명언을 데이터베이스에 저장하고, 카테고리별로 조회 가능하게 수정.
+- **명언 추가 기능**: 사용자가 직접 명언을 추가할 수 있도록 기능 추가.
+- **삭제 기능 추가**: 리스트에서 선택한 명언을 삭제할 수 있도록 기능 추가.
 
 ## Screenshots
 
