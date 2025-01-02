@@ -44,6 +44,18 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 - 선택한 카테고리에 따라 명언이 표시됩니다.  
 - 예: **Success** 카테고리를 선택한 경우.
 
+### Add Quote
+<img src="screenshots/add.png" alt="Home Screen" width="200">
+
+- 카테고리를 롱 클릭하면 dialog가 출력됩니다.
+- 새로운 명언을 입력하고 추가 버튼을 클릭하면 데이터베이스에 추가됩니다.
+
+### Delete Quote
+
+- 오른쪽 상단의 아이콘을 클릭하면  각 카테고리별 저장된 명언들 
+<img src="screenshots/delete.png" alt="Home Screen" width="200">
+
+- 명언들 오른쪽의 체크박스를 선택하고 아래의 버튼을 누르면 삭제됩니다.
 
 ## 실행 화면
 
