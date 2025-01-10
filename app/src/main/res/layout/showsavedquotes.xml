@@ -10,14 +10,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
 
-        <ImageButton
-            android:id="@+id/backBtn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/white"
-            android:scaleType="fitXY"
-            android:src="@drawable/back"></ImageButton>
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:padding="3dp"
+            android:text="back"
+            android:textSize="23dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -25,31 +29,26 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="저장된 명언"
-            android:textColor="@color/white"
             android:textSize="25dp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/list"
+    <TextView
+        android:id="@+id/tv_delete_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="항목을 길게 누르면 삭제됩니다."
+        android:textSize="14sp"
+        android:textStyle="italic|bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        android:textColor="@color/black"
-        android:inputType="textMultiLine"></ListView>
+        android:layout_weight="10"></androidx.recyclerview.widget.RecyclerView>
 
-    <android.widget.Button
-        android:id="@+id/deleteBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="end"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/button_background"
-        android:text="선택삭제"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="bold"></android.widget.Button>
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="4dp"
-    android:background="@color/white"
+
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MainActivity">
@@ -22,7 +22,7 @@
             android:text="@string/title"
             android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black"
+
             android:textSize="40sp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>
@@ -32,8 +32,7 @@
             android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="15dp"
-            android:background="#ffffff" />
+            android:layout_marginRight="15dp" />
     </RelativeLayout>
 
 
@@ -98,7 +97,6 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:text="@string/txt"
-            android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>

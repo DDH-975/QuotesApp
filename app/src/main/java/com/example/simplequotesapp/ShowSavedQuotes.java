@@ -5,13 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -19,48 +15,52 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class ShowSavedQuotes extends AppCompatActivity {
-    ImageButton backbtn;
-    Button deletebtn;
-    Intent intent, getIntent;
-    SQLiteDatabase sqLiteDb;
-    ListView listView;
-    ArrayAdapter<String> adapter;
-    ArrayList<String> quotesList;
 
+    private TextView tv_back;
+    private Intent intent, getIntent;
+    private SQLiteDatabase sqLiteDb;
+    private Adapter adapter;
+    private ArrayList<RecylcerData> quotesList;
+    private RecyclerView recyclerView;
+    private MyDbHelper myDbHelper;
+
+    /*****************************************************************
+     명언 리스트 삽입 메서드
+     ******************************************************************/
     private void fetchData(int categoryId) {
-        MyDbHelper dbHelper = new MyDbHelper(this);
-        sqLiteDb = dbHelper.getReadableDatabase();
+        sqLiteDb = myDbHelper.getReadableDatabase();
 
-        Cursor cursor = sqLiteDb.rawQuery("select quote_text from Quotes where category_id = ? ", new String[]{String.valueOf(categoryId)});
+        Log.i("fetchData", "Fetching data for categoryId: " + categoryId);  // 카테고리 ID 로그
+
+        Cursor cursor = sqLiteDb.rawQuery("SELECT quote_text FROM Quotes WHERE category_id = ?",
+                new String[]{String.valueOf(categoryId)});
 
         if (cursor.moveToFirst()) {
             do {
                 String quote = cursor.getString(0);
-                quotesList.add(quote);
+                Log.i("fetchData", "Fetched quote: " + quote);  // 가져온 명언 로그
+
+                RecylcerData recyclerData = new RecylcerData(quote);
+                quotesList.add(recyclerData);
+
+                Log.i("fetchData", "Quote added to list: " + quote);  // 리스트에 추가된 명언 로그
             } while (cursor.moveToNext());
+        } else {
+            Log.i("fetchData", "No quotes found for categoryId: " + categoryId);  // 결과가 없을 때 로그
         }
 
         cursor.close();
         sqLiteDb.close();
 
+        Log.i("fetchData", "Database closed.");
+        adapter.notifyDataSetChanged();  // 어댑터 갱신
     }
-
-    private void deleteQuotesFromDb(ArrayList<String> selectedQuotes) {
-        MyDbHelper dbHelper = new MyDbHelper(this);
-        sqLiteDb = dbHelper.getWritableDatabase();
-
-        for (String quote : selectedQuotes) {
-            // SQL 쿼리로 해당 명언 삭제
-            sqLiteDb.execSQL("DELETE FROM Quotes WHERE quote_text = ?", new Object[]{quote});
-        }
-
-        sqLiteDb.close();
-    }
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,63 +73,40 @@ public class ShowSavedQuotes extends AppCompatActivity {
             return insets;
         });
 
-        listView = (ListView) findViewById(R.id.list);
-        backbtn = (ImageButton) findViewById(R.id.backBtn);
-        deletebtn = (Button) findViewById(R.id.deleteBtn);
-        intent = new Intent(getApplicationContext(), MainActivity.class);
+        // MyDbHelper 초기화
+        myDbHelper = new MyDbHelper(this);
 
+        quotesList = new ArrayList<>();
+        recyclerView = findViewById(R.id.recylerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new Adapter(quotesList, myDbHelper);
+        recyclerView.setAdapter(adapter);
+
+        tv_back = findViewById(R.id.tv_back);
+        intent = new Intent(ShowSavedQuotes.this, MainActivity.class);
+
+        // Intent로 전달받은 categoryId 가져오기
         getIntent = getIntent();
         int categoryId = getIntent.getIntExtra("categoryid", -1);
         if (categoryId == -1) {
-            Log.i("인텐트 테스트", "categroyid값이 전달되지 않음 ");
+            Log.i("인텐트 테스트", "categoryid값이 전달되지 않음 ");
         } else {
-            Log.i("인텐트 테스트", "categroyid : " + categoryId);
+            Log.i("인텐트 테스트", "categoryid : " + categoryId);
         }
 
-        quotesList = new ArrayList<>();
-
+        // 데이터 불러오기
         fetchData(categoryId);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, quotesList);
-        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        listView.setAdapter(adapter);
-
-
-        backbtn.setOnClickListener(new View.OnClickListener() {
+        /*****************************************************************
+         이전 액티비티로 이동
+         ******************************************************************/
+        tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(intent);
+                finish();
             }
         });
-
-
-        deletebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SparseBooleanArray checkedItems = listView.getCheckedItemPositions(); // 선택된 항목들
-                ArrayList<String> selectedQuotes = new ArrayList<>();
-
-                for (int i = 0; i < checkedItems.size(); i++) {
-                    int position = checkedItems.keyAt(i);
-                    boolean isChecked = checkedItems.valueAt(i);
-                    if (isChecked) {
-                        selectedQuotes.add(quotesList.get(position)); // 체크된 항목 저장
-                    }
-                }
-
-                // 선택된 명언 삭제 처리
-                if (!selectedQuotes.isEmpty()) {
-                    deleteQuotesFromDb(selectedQuotes);
-                    // 삭제 후 리스트 업데이트
-                    quotesList.removeAll(selectedQuotes);
-                    adapter.notifyDataSetChanged();
-                    Toast.makeText(getApplicationContext(), "선택된 명언 삭제 완료", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), "삭제할 명언을 선택해주세요", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-
     }
 }
+
