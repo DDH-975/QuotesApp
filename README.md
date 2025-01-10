@@ -51,9 +51,11 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 ## Screenshots
 
 ### Login Screen, Register, Screen
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
 <img src="screenshots/login.png" alt="login" width="200">
-
 <img src="screenshots/Register.png" alt="Register" width="200">
+</div>
+  
 
 - 이메일과 패스워드를 이용해 간단 로그인, 회원가입 기능 구현
 
