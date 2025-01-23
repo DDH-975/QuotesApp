@@ -37,7 +37,6 @@ QuotesApp은 **성공**, **인생**, **동기 부여**의 세 가지 카테고�
 ### 업데이트 25.1.10
 - **Firebase Authentication**: 앱에 로그인 및 회원가입 기능 추가.
   - Firebase를 이용해 사용자 계정 생성 및 인증 가능.
-  - 로그인 상태 유지 및 로그아웃 기능 포함.
 
 - **ListView -> RecyclerView 변경**: 앱 내 명언 리스트를 RecyclerView로 변경.
   - 성능 향상 및 더 유연한 아이템 관리 가능.
